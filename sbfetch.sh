@@ -24,4 +24,4 @@ $disk
 Up for: $up
 EOF
 }
-${base_Info}
+base_Info

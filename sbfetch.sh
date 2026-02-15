@@ -14,10 +14,13 @@ base_Info(){
     local term_em=$(echo $TERM)
     local sh=$(basename "$SHELL")
     local krnl=$(uname -r)
+    local wm-de=$(echo $XDG_CURRENT_DESKTOP)
+    local home=$(cat /etc/hostname 2>/dev/null || hostname)
     cat << EOF
-Hello $user
+Hello $user/$home
 Distro: $(LinDistro)
 Kernel: $krnl
+WM/DE: $wm-de
 Terminal: $term_em
 Shell: $sh
 $disk
